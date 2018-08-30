@@ -4,6 +4,7 @@ package com.nagarro.Session;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
 import com.nagarro.model.User;
 
 public class RegisterDao {

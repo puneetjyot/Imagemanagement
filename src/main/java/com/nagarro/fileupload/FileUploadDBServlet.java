@@ -1,8 +1,8 @@
-package com.nagarro.register;
+package com.nagarro.fileupload;
 
+import java.io.File;
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,19 +12,19 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.nagarro.Session.RegisterDao;
-import com.nagarro.model.User;
+import com.nagarro.services.UploadService;
 
 /**
- * Servlet implementation class RegisterServlet
+ * Servlet implementation class FileUploadDBServlet
  */
-public class RegisterServlet extends HttpServlet {
+
+public class FileUploadDBServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterServlet() {
+    public FileUploadDBServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,14 +41,14 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Here");
+		UploadService uploadservice=new UploadService();
+		uploadservice.upload(request);
 		
-		String username=request.getParameter("username");
-		String password=request.getParameter("password");
-		RegisterDao registerdao=new RegisterDao();
-		registerdao.register(username, password);
-		RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Login.jsp");
-		requestDispatcher.forward(request,response);
-		
+			
+			
+	
 	}
 
 }
