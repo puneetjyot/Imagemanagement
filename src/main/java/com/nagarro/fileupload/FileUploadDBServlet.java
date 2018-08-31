@@ -2,11 +2,13 @@ package com.nagarro.fileupload;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,6 +36,8 @@ public class FileUploadDBServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -42,9 +46,12 @@ public class FileUploadDBServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("Here");
+		//System.out.println("Here");
+		HttpSession httpsession=request.getSession(false);
+		String user=(String)httpsession.getAttribute("user");
+
 		UploadService uploadservice=new UploadService();
-		uploadservice.upload(request);
+		uploadservice.upload(request,user);
 		
 			
 			

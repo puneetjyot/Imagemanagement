@@ -14,13 +14,13 @@ import com.nagarro.constants.Constant;
 
 public class UploadService {
 
-	public void upload(HttpServletRequest request) {
+	public void upload(HttpServletRequest request, String user) {
 		// TODO Auto-generated method stub
 		
 
-		  		 File file ;
-		  	    int maxFileSize = 5000 * 1024;
-		  	    int maxMemSize = 5000 * 1024;
+		  		 File file=null ;
+		  	    int maxFileSize = 1024 * 1024;
+		  	    int maxMemSize = 1024 * 1024 * 10;
 		  	    //ServletContext context = request.getServletContext();
 		  String filePath = Constant.getPath();
 
@@ -80,9 +80,12 @@ public class UploadService {
 		  	          System.out.println("</body>");
 		  	          System.out.println("</html>");
 		  	          ImageToDBDao image=new ImageToDBDao();
-		  	          image.setimage();
+		  	          image.setimage(user);
 		  	       } catch(Exception ex) {
 		  	          System.out.println(ex);
+		  	       }
+		  	       finally{
+		  	    	   file.delete();
 		  	       }
 		  	    } else {
 		  	   	 System.out.println("<html>");

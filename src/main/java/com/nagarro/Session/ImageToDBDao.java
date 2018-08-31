@@ -11,7 +11,7 @@ import com.nagarro.model.ImageWrapper;
 
 public class ImageToDBDao {
 
-	public void setimage(){
+	public void setimage(String user){
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		File file=null;
@@ -31,10 +31,10 @@ public class ImageToDBDao {
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
-		 
 		ImageWrapper image = new ImageWrapper();
 		image.setData(imageData);
-		 
+		image.setUsername(user);
+		image.setImagename(files.getName());
 		session.save(image);    //Save the data
 		 
 		session.getTransaction().commit();
