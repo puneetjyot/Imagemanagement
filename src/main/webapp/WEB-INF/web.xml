@@ -22,6 +22,30 @@
   	<description></description>
   	<servlet-class>com.nagarro.fileupload.FileUploadDBServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DeleteImageServlet</servlet-name>
+  	<display-name>DeleteImageServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nagarro.DeleteImage.DeleteImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>updateNameServlet</servlet-name>
+  	<display-name>updateNameServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nagarro.updateName.updateNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateImageServlet</servlet-name>
+  	<display-name>UpdateImageServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nagarro.updateimage.UpdateImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateImage</servlet-name>
+  	<display-name>UpdateImage</display-name>
+  	<description></description>
+  	<servlet-class>com.nagarro.services.UpdateImage</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>RegisterServlet</servlet-name>
   	<url-pattern>/RegisterServlet</url-pattern>
@@ -33,5 +57,21 @@
   <servlet-mapping>
   	<servlet-name>FileUploadDBServlet</servlet-name>
   	<url-pattern>/FileUploadDBServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteImageServlet</servlet-name>
+  	<url-pattern>/DeleteImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updateNameServlet</servlet-name>
+  	<url-pattern>/updateNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateImageServlet</servlet-name>
+  	<url-pattern>/UpdateImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateImage</servlet-name>
+  	<url-pattern>/UpdateImage</url-pattern>
   </servlet-mapping>
 </web-app>

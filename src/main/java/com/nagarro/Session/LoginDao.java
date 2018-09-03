@@ -36,6 +36,7 @@ public class LoginDao {
          User result=(User) employees.get(0);
          System.out.println("hello-> "+result.getUsername());
          conditions.remove("password");
+         
   		DownloadImage downloadimage=new DownloadImage();
   		downloadimage.downloadDbImage(conditions);
          

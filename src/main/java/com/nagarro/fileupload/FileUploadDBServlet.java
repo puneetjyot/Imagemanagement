@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,6 +40,11 @@ public class FileUploadDBServlet extends HttpServlet {
 
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.setIntHeader("Refresh", 1);
+//		RequestDispatcher requestDispatcher=request.getRequestDispatcher("profile.jsp");
+//		
+// 		requestDispatcher.include(request,response);
+		//doPost(request, response);
 	}
 
 	/**
@@ -52,6 +58,13 @@ public class FileUploadDBServlet extends HttpServlet {
 
 		UploadService uploadservice=new UploadService();
 		uploadservice.upload(request,user);
+		
+//		if(isSet){
+	//	response.setIntHeader("Refresh", 1);
+			RequestDispatcher requestDispatcher=request.getRequestDispatcher("profile.jsp");
+			
+	 		requestDispatcher.include(request,response);
+		//}
 		
 			
 			

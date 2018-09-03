@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -53,8 +54,20 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
-		HttpSession httpsession=request.getSession();
+		
+		
+		
+		HttpSession httpsession=request.getSession(false);
+		if(!Objects.isNull(httpsession)){
+		
+			httpsession.invalidate();
+			
+		}
+		 httpsession=request.getSession(true);
+
 		httpsession.setAttribute("user",username);
+		
+		
 		
 		LoginDao logindao=new LoginDao();
 		boolean validate= logindao.login(username,password);
