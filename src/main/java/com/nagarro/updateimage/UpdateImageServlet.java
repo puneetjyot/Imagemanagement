@@ -1,3 +1,18 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/07/2018
+ *
+ * Last updated By- 02/07/2018
+ *
+ * Description-Update Image servlet
+
+ */
+
 package com.nagarro.updateimage;
 
 import java.io.IOException;
@@ -61,14 +76,26 @@ public class UpdateImageServlet extends HttpServlet {
 		
 		updateImage.updateImage(imageid, request);
 		
+		
+		/**
+		 * used to refresh everytime redirecting to profile jsp 
+		 */
+		
 		HttpSession httpsession=request.getSession(false);
+	
 		String username=(String) httpsession.getAttribute("user");
+		
 		Map conditions=new HashMap();
+		
 		conditions.put("username", username);
+		
 		DownloadImage downloadimage=new DownloadImage();
-  		downloadimage.downloadDbImage(conditions);
+  		
+		downloadimage.downloadDbImage(conditions);
   		
 		response.sendRedirect("profile.jsp");
 		
 	}
-	}
+
+}
+

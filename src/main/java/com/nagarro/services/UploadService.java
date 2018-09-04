@@ -1,3 +1,18 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/07/2018
+ *
+ * Last updated By- 02/07/2018
+ *
+ * Description-Upload Service class uses to upload selected file after checking the size of file and setting the image
+
+ */
+
 package com.nagarro.services;
 
 import java.io.File;
@@ -49,11 +64,9 @@ public class UploadService {
 		  	          // Process the uploaded file items
 		  	          Iterator i = fileItems.iterator();
 		  	 
-		  	          System.out.println("<html>");
-		  	          System.out.println("<head>");
-		  	          System.out.println("<title>JSP File upload</title>");  
-		  	          System.out.println("</head>");
-		  	          System.out.println("<body>");
+		  	        
+		  	          System.out.println("JSP File upload");  
+		  	        
 		  	 
 		  	          while ( i.hasNext () ) {
 		  	             FileItem fi = (FileItem)i.next();
@@ -74,11 +87,10 @@ public class UploadService {
 		  	                }
 		  	                fi.write( file ) ;
 		  	                System.out.println("Uploaded Filename: " + filePath + 
-		  	                fileName + "<br>");
+		  	                fileName );
 		  	             }
 		  	          }
-		  	          System.out.println("</body>");
-		  	          System.out.println("</html>");
+		  	         
 		  	          ImageToDBDao image=new ImageToDBDao();
 		  	          image.setimage(user);
 		  	       } catch(Exception ex) {
@@ -88,14 +100,7 @@ public class UploadService {
 		  	    	   file.delete();
 		  	       }
 		  	    } else {
-		  	   	 System.out.println("<html>");
-		  	   	 System.out.println("<head>");
-		  	   	 System.out.println("<title>Servlet upload</title>");  
-		  	   	 System.out.println("</head>");
-		  	   	 System.out.println("<body>");
-		  	   	 System.out.println("<p>No file uploaded</p>"); 
-		  	   	 System.out.println("</body>");
-		  	   	 System.out.println("</html>");
+		  	   	 System.out.println("No file uploaded");
 		  	    }
 		
 	}

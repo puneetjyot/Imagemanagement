@@ -1,3 +1,16 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/09/2018
+ *
+ * Last updated By- 02/09/2018
+ *
+ * Description- Hibernamte Util class to create session factory and to open session
+ */
 package com.nagarro.hibernateutil;
 
 import org.hibernate.SessionFactory;
@@ -22,10 +35,19 @@ public class HibernateUtil {
 	        }
 	    }
 	  
+	    /**
+	     * Retrun session factory
+	     * @return
+	     */
+	    
 	    public static SessionFactory getSessionFactory() {
 	        return sessionFactory;
 	    }
 	  
+	    /**
+	     * cloase the session
+	     */
+	    
 	    public static void shutdown() {
 	        getSessionFactory().close();
 	    }

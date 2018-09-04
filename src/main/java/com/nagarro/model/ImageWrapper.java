@@ -1,3 +1,19 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/07/2018
+ *
+ * Last updated By- 02/07/2018
+ *
+ * Description-Model class of image used to map image attributes to database
+
+ */
+
+
 package com.nagarro.model;
 
 import java.io.Serializable;

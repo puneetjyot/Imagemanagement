@@ -1,3 +1,17 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/09/2018
+ *
+ * Last updated By- 02/09/2018
+ *
+ * Description-Register servlet uses to register into database and calls registerdao services to register
+
+ */
 package com.nagarro.register;
 
 import java.io.IOException;
@@ -40,6 +54,7 @@ public class RegisterServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String username=request.getParameter("username");

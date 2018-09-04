@@ -1,3 +1,18 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/07/2018
+ *
+ * Last updated By- 02/07/2018
+ *
+ * Description-Download Databse image to the folder
+
+ */
+
 package com.nagarro.filedownload;
 
 import java.io.File;
@@ -18,6 +33,11 @@ import com.nagarro.model.User;
 
 public class DownloadImage {
 
+	/**
+	 * download db image
+	 * @param conditions
+	 */
+	
 	public void downloadDbImage(Map conditions){
 		
 		
@@ -28,7 +48,9 @@ public class DownloadImage {
 		
 		
 		
-		
+		/**
+		 * Checks the condition and download the image for the logged in user
+		 */
 
 		Criteria cr = session.createCriteria(ImageWrapper.class);
 		
@@ -37,11 +59,14 @@ public class DownloadImage {
 	         List images = cr.list();
 	        
 	         System.out.println();
+	         
+	         //setting image path as absolute file path 
 	         String imageFilePath=""+new File(".").getAbsolutePath()+"\\images";
 
 		       File cleanfile=new File(imageFilePath);
 		       try {
-				FileUtils.cleanDirectory(cleanfile);
+				
+		    	   FileUtils.cleanDirectory(cleanfile);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -60,6 +85,9 @@ public class DownloadImage {
 		 
 		try{
 		
+			/**
+			 * Write the image to the file path specified
+			 */
 		     
 			
 			FileOutputStream fos = new FileOutputStream(imageFilePath+"\\"+imagename+"#"+imgNew.getId()+".jpeg");

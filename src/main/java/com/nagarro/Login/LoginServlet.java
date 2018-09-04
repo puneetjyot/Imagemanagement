@@ -1,4 +1,22 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/09/2018
+ *
+ * Last updated By- 02/09/2018
+ *
+ * Description-Login servlet uses to login into application and calls login services to validate
+
+ */
+
+
+
 package com.nagarro.Login;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,6 +42,9 @@ import com.nagarro.Session.LoginDao;
 import com.nagarro.filedownload.DownloadImage;
 import com.nagarro.hibernateutil.HibernateUtil;
 import com.nagarro.model.User;
+
+
+
 
 /**
  * Servlet implementation class LoginServlet
@@ -52,6 +73,9 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	
+		
+		
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		

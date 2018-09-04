@@ -1,8 +1,24 @@
+/*
+ * Assignment Advance java 2
+ *
+ * JDK Version 1.8
+ *
+ * Puneetjyot Singh(Trainee Technology)
+ *
+ * Creation date-24/07/2018
+ *
+ * Last updated By- 02/07/2018
+ *
+ * Description-Image upload servlet uses to upload image into database and calls upload services
+
+ */
 package com.nagarro.fileupload;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +31,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.nagarro.filedownload.DownloadImage;
 import com.nagarro.services.UploadService;
 
 /**
@@ -61,9 +78,21 @@ public class FileUploadDBServlet extends HttpServlet {
 		
 //		if(isSet){
 	//	response.setIntHeader("Refresh", 1);
-			RequestDispatcher requestDispatcher=request.getRequestDispatcher("profile.jsp");
+		
+		 // HttpSession httpsession=request.getSession(false);
 			
-	 		requestDispatcher.include(request,response);
+		//	String username=(String) httpsession.getAttribute("user");
+		  
+		  Map conditions=new HashMap();
+			
+			conditions.put("username", user);
+			
+			DownloadImage downloadimage=new DownloadImage();
+			
+			downloadimage.downloadDbImage(conditions);
+			
+			response.sendRedirect("profile.jsp");
+			
 		//}
 		
 			
