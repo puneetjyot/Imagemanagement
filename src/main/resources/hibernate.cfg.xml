@@ -10,6 +10,6 @@
         <property name="show_sql">true</property>      
      <!--   <property name="hbm2ddl.auto">update</property>
          --> <mapping resource="user.hbm.xml" />
-          <mapping class="com.nagarro.model.ImageWrapper"></mapping>
+          <mapping class="com.nagarro.imagemanagement.model.ImageWrapper"></mapping>
     </session-factory>
 </hibernate-configuration>

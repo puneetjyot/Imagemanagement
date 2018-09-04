@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
   
 <hibernate-mapping>
-	<class table="User_Table" name="com.nagarro.model.User">
+	<class table="User_Table" name="com.nagarro.imagemanagement.model.User">
 	<id name="id" type="int" column="Id">
 		<generator class="increment"></generator>
 	</id>

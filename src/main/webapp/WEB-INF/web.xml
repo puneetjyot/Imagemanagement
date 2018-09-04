@@ -8,43 +8,43 @@
   	<servlet-name>RegisterServlet</servlet-name>
   	<display-name>RegisterServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.register.RegisterServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.register.RegisterServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>LoginServlet</servlet-name>
   	<display-name>LoginServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.Login.LoginServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.LoginServlet.LoginServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>FileUploadDBServlet</servlet-name>
   	<display-name>FileUploadDBServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.fileupload.FileUploadDBServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.fileuploadservlet.FileUploadDBServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>DeleteImageServlet</servlet-name>
   	<display-name>DeleteImageServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.DeleteImage.DeleteImageServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.DeleteImageServlet.DeleteImageServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>updateNameServlet</servlet-name>
   	<display-name>updateNameServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.updateName.updateNameServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.updatenameservlet.updateNameServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>UpdateImageServlet</servlet-name>
   	<display-name>UpdateImageServlet</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.updateimage.UpdateImageServlet</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.updateimage.updateimageservlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>UpdateImage</servlet-name>
   	<display-name>UpdateImage</display-name>
   	<description></description>
-  	<servlet-class>com.nagarro.services.UpdateImage</servlet-class>
+  	<servlet-class>com.nagarro.imagemanagement.services.UpdateImage</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>RegisterServlet</servlet-name>
